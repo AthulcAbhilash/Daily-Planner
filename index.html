@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Logo.png">
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="header">
+            <img src="logo.png" class="logo">
+            <h2>Day Planner</h2>
+        </div>
+        <label>Wake Time</label>
+        <input type="time" id="wakeTime">
+        <label>Sleep Time</label>
+        <input type="time" id="sleepTime">
+        <div class="meal-inputs">
+            <input type="number" id="breakfastTime" placeholder="Breakfast Break(min)">
+            <input type="number" id="lunchTime" placeholder="Lunch Break(min)">
+            <input type="number" id="dinnerTime" placeholder="Dinner Break(min)">
+        </div>
+        <hr>
+        <h3>Add Task</h3>
+        <input type="text" id="taskName" placeholder="Task name">
+        <input type="number" id="taskTime" placeholder="Duration (min)">
+        <div class="task-options">
+            <label><input type="checkbox" id="fixedCheck"> Fix Time</label>
+            <input type="time" id="fixedTime" disabled>
+        </div>
+        <button onclick="addTask()">Add Task</button>
+        <div id="taskList"></div>
+        <button class="generate" onclick="generateRoutine()">Generate Plan</button>
+        <p id="message"></p>
+    </div>
+    <div class="right">
+        <div id="output">
+            <p class="empty">Your plan will appear here...</p>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
